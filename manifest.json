@@ -1,0 +1,29 @@
+{
+	"manifest_version": 2,
+	"name": "ĐKHP UIT",
+	"version": "20.19.8.6",
+	"author": "Truoc Phan",
+	"description": "Chrome extension \"ĐKHP UIT\" tự động đăng ký học phần dành riêng cho sinh viên UIT chỉ cần mở trình duyệt Chrome lên và tải extension \"ĐKHP UIT\" vào rồi tận hưởng (chỉnh sửa thông tin đăng nhập và thêm mã lớp cần đăng ký trong tập tin \"background.js\"). Đối với những môn đã đăng ký đủ số lượng thì \"ĐKHP UIT\" sẽ liên tục gửi yêu cầu đăng ký môn đó lên Server tới khi nào thành công thì không gửi nữa.",
+
+	"permissions": [
+		"*://*.uit.edu.vn/*",
+		"notifications"
+	],
+
+	"icons": {
+		"128": "images/icon.png",
+		"48": "images/icon.png",
+		"16": "images/icon.png"
+	},
+	"background": {
+		"scripts": [
+			"js/jquery-3.3.1.min.js",
+			"js/background.js"
+		],
+		"persistent": false
+	},
+
+	"browser_action": {
+		"default_icon": "images/icon.png"
+	}
+}
